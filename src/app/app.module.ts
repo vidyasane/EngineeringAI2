@@ -8,11 +8,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { DragComponent } from './drag/drag.component';
 import { FormsModule }   from '@angular/forms';
 import { FilterPipeModule } from 'ngx-filter-pipe';
+import { SearchPipe } from './search.pipe';
 @NgModule({
   declarations: [
     AppComponent,
     TableComponent,
-    DragComponent
+    DragComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,

@@ -13,11 +13,13 @@ export class TableComponent implements OnInit {
   
   set;
   data;
-  th;
+
   term: any = { title: '' };
    statusText:string;
    selectedName:any;
   subscription: Subscription;
+  rowData: any;
+  rawData;
   constructor(private ht:HttpClient,private a:TabledataService){
 
   }
@@ -27,11 +29,15 @@ export class TableComponent implements OnInit {
     ).subscribe(resp=>{console.log(resp)
     this.set=resp
     this.data=this.set.hits});
-   ;
+  
+
+
   }
 
 
 
+
+  
     
 
 highlightRow(e) {
@@ -43,11 +49,11 @@ this.selectedName=e.title;
 
 
 
-  button(id){
-    console.log(id)
-   this.th=id;
+  button(row,a){
+    console.log(row)
+   this.rowData=row;
 
-this.a.postInfo(id).subscribe(resp=>console.log(resp))
+this.a.postInfo(row).subscribe(resp=>console.log(resp))
 
 
   }

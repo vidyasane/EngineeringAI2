@@ -1,21 +1,14 @@
-.td{
+ 
+ .td{
     font-size: 19px;
     }
-    table {
-        width: 100%;
-        font: 14px Verdana;
-    }
-    table, th, td {
-        border: solid 1px #999999;
-        border-collapse: collapse;
-        padding: 2px 3px;
-        text-align: center;
-    }
-    th {
-        font-weight: bold;
-    }
-     
+    
+    
     table tr.highlight {
-        background-color:rgb(26, 171, 207) !important;
-        
+    background-color:powderblue ;
+    
+    }
+    
+    thead{
+    background-color:gray ; 
     }
